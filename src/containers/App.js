@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import '../App.css';
+
+import User from '../components/User';
+import Year from '../components/Year';
 
 import { connect } from "react-redux"
 
 class App extends Component {
   render() {
     return (
-      <h2>Welcome to React {this.props.user}</h2>
+      <div>
+        <User user={this.props.user} />
+        <Year />
+      </div>
     );
   }
 }
